@@ -21,16 +21,20 @@ class TriangleTest(unittest.TestCase):
         """any non-positive argument should raise ValueError"""
         with self.assertRaises(ValueError):
             b1 = is_triangle(-1, 2, 2)
+        with self.assertRaises(ValueError):
             b2 = is_triangle( 1, 0, 2)
 
         with self.assertRaises(ValueError):
             b1 = is_triangle( 1, -1, 2)
+        with self.assertRaises(ValueError):
             b2 = is_triangle( 1,  0, 2)
 
         with self.assertRaises(ValueError):
             b1 = is_triangle( 1, 2, -1)
+        with self.assertRaises(ValueError):
             b2 = is_triangle( 1, 2,  0)
 
         with self.assertRaises(ValueError):
             b1 = is_triangle( -1, -1, -1)
+        with self.assertRaises(ValueError):
             b2 = is_triangle( 0, 0, 0)
